@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PanelController">
+   <children>
+      <AnchorPane prefHeight="401.0" prefWidth="483.0" style="-fx-background-color: darkGrey;">
+         <children>
+            <Pane prefHeight="67.0" prefWidth="555.0" style="-fx-background-color: gray;">
+               <children>
+                  <Pane layoutX="-43.0" layoutY="40.0" opacity="0.19" prefHeight="10.0" prefWidth="579.0" style="-fx-background-color: black;" />
+                  <Text fill="#07ed6b" layoutX="332.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KrivatBank" textAlignment="CENTER" wrappingWidth="171.9173583984375">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Text fill="WHITE" layoutX="22.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="95.8768081665039">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="22.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card: " wrappingWidth="49.87683868408203">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="22.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance: " wrappingWidth="79.8768081665039">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="profileUsername" fill="WHITE" layoutX="111.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="129.8768081665039">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="cardNo" fill="WHITE" layoutX="69.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="49.87683868408203">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="balance" fill="WHITE" layoutX="93.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="49.87683868408203">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
