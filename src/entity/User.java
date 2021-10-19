@@ -2,7 +2,7 @@ package entity;
 
 public class User {
 
-    private Long id;
+    private int id;
     private String username;
     private String password;
     private int balance;
@@ -11,7 +11,7 @@ public class User {
     public User() {
     }
 
-    public User(Long id, String username, String password, int balance, String cardNo) {
+    public User(int id, String username, String password, int balance, String cardNo) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -32,15 +32,18 @@ public class User {
     }
 
     public void setData(User user) {
+        this.id = user.getId();
         this.username = user.getUsername();
         this.password = user.getPassword();
+        this.balance = user.getBalance();
+        this.cardNo = user.getCardNo();
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

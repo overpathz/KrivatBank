@@ -20,7 +20,7 @@
                         <Font name="System Bold" size="23.0" />
                      </font>
                   </Text>
-                  <Text fill="#00ffb1" layoutX="239.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="118.3017578125">
+                  <Text fill="#00ffb1" layoutX="297.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="101.6351318359375">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -43,12 +43,17 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Text fx:id="pswdsNotSimilarText" fill="RED" layoutX="82.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wrong input data. Try again" textAlignment="CENTER" visible="false" wrappingWidth="238.96841430664062">
+            <Text fx:id="pswdsNotSimilarText" fill="RED" layoutX="82.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User does not exist! Try again" textAlignment="CENTER" visible="false" wrappingWidth="238.96841430664062">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
             <PasswordField fx:id="pswdField" layoutX="127.0" layoutY="195.0" />
+            <Button fx:id="regBtn" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#showRegisterForm" prefHeight="12.0" prefWidth="74.0" style="-fx-background-color: purple;" text="Register" textFill="#00ffb1">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>

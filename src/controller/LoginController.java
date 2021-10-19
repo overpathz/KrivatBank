@@ -35,6 +35,9 @@ public class LoginController {
     private Button loginBtn;
 
     @FXML
+    private Button regBtn;
+
+    @FXML
     private TextField usernameTextEntry;
 
     private final ExecutorService exService = Executors.newFixedThreadPool(5);
@@ -48,18 +51,26 @@ public class LoginController {
         String username = usernameTextEntry.getText();
         String password = pswdField.getText();
 
-        User user = new User(username, password, 0, "");
+        User formUser = new User(username, password);
 
-        if (!userDao.isUserExist(user)) {
+        System.out.println(formUser);
+
+        if (!userDao.isUserExist(formUser)) {
             showUserNotExist();
         } else {
-            if (userDao.checkData(user)) {
-                appContext.getCurrentUser().setData(user);
+            if (userDao.checkData(formUser)) {
+                formUser = userDao.getUserByUsername(formUser.getUsername());
+                appContext.getCurrentUser().setData(formUser);
                 primaryStage.setScene(appContext.getPages().getPage("PersonalPanel"));
             } else {
                 showUserNotExist();
             }
         }
+    }
+
+    @FXML
+    void showRegisterForm(ActionEvent event) {
+        primaryStage.setScene(appContext.getPages().getPage("Register"));
     }
 
     @FXML
