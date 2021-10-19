@@ -7,7 +7,7 @@ Tech stack:
  - PostgreSQL
  - JDBC
 
-## // TODO: password hashing, saving transaction history in database not in-memory, better form validation
+#### // TODO: password hashing, saving transaction history in database not in-memory, better form validation
 
 
 ### Overview:
