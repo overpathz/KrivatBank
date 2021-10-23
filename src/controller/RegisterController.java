@@ -1,14 +1,11 @@
 package controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import context.AppContext;
 import dao.UserDao;
 import entity.User;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -19,12 +16,6 @@ import util.AppContextBuffer;
 import util.FormValidator;
 
 public class RegisterController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private PasswordField confirmPswdField;
@@ -39,23 +30,20 @@ public class RegisterController {
     private Button registerBtn;
 
     @FXML
-    private Button loginBtn;
-
-    @FXML
     private TextField usernameTextEntry;
 
     private final ExecutorService exService = Executors.newFixedThreadPool(5);
-    private AppContext appContext = AppContextBuffer.getAppContext();
-    private Stage primaryStage = appContext.getPrimaryStage();
-    private UserDao userDao = new UserDao();
+    private final AppContext appContext = AppContextBuffer.getAppContext();
+    private final Stage primaryStage = appContext.getPrimaryStage();
+    private final UserDao userDao = new UserDao();
 
     @FXML
-    void login(ActionEvent event) {
-        primaryStage.setScene(appContext.getPages().getPage("Login"));
+    void login() {
+        primaryStage.setScene(appContext.getPages().get("Login"));
     }
 
     @FXML
-    void register(ActionEvent event) {
+    void register() {
 
         String username = usernameTextEntry.getText();
         String password = pswdField.getText();
@@ -65,7 +53,7 @@ public class RegisterController {
 
         if (FormValidator.checkRegForm(username, password, confirmedPassword)) {
             userDao.save(user);
-            primaryStage.setScene(appContext.getPages().getPage("Login"));
+            primaryStage.setScene(appContext.getPages().get("Login"));
         } else {
             showPswdsNotSimilar();
         }

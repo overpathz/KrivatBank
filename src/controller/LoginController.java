@@ -12,18 +12,10 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import util.AppContextBuffer;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class LoginController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private PasswordField pswdField;
@@ -35,25 +27,22 @@ public class LoginController {
     private Button loginBtn;
 
     @FXML
-    private Button regBtn;
-
-    @FXML
     private TextField usernameTextEntry;
 
     private final ExecutorService exService = Executors.newFixedThreadPool(5);
-    private AppContext appContext = AppContextBuffer.getAppContext();
-    private Stage primaryStage = appContext.getPrimaryStage();
-    private UserDao userDao = new UserDao();
+
+    private final AppContext appContext = AppContextBuffer.getAppContext();
+    private final Stage primaryStage = appContext.getPrimaryStage();
+
+    private final UserDao userDao = new UserDao();
 
     @FXML
-    void login(ActionEvent event) {
+    void login() {
 
         String username = usernameTextEntry.getText();
         String password = pswdField.getText();
 
         User formUser = new User(username, password);
-
-        System.out.println(formUser);
 
         if (!userDao.isUserExist(formUser)) {
             showUserNotExist();
@@ -61,7 +50,7 @@ public class LoginController {
             if (userDao.checkData(formUser)) {
                 formUser = userDao.getUserByUsername(formUser.getUsername());
                 appContext.getCurrentUser().setData(formUser);
-                primaryStage.setScene(appContext.getPages().getPage("PersonalPanel"));
+                primaryStage.setScene(appContext.getPages().get("PersonalPanel"));
             } else {
                 showUserNotExist();
             }
@@ -70,7 +59,7 @@ public class LoginController {
 
     @FXML
     void showRegisterForm(ActionEvent event) {
-        primaryStage.setScene(appContext.getPages().getPage("Register"));
+        primaryStage.setScene(appContext.getPages().get("Register"));
     }
 
     @FXML

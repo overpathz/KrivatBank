@@ -7,16 +7,18 @@ public class User {
     private String password;
     private int balance;
     private String cardNo;
+    private String transactionHistory;
 
     public User() {
     }
 
-    public User(int id, String username, String password, int balance, String cardNo) {
+    public User(int id, String username, String password, int balance, String cardNo, String transactionHistory) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.balance = balance;
         this.cardNo = cardNo;
+        this.transactionHistory = transactionHistory;
     }
 
     public User(String username, String password) {
@@ -24,11 +26,12 @@ public class User {
         this.password = password;
     }
 
-    public User(String username, String password, int balance, String cardNo) {
+    public User(String username, String password, int balance, String cardNo, String transactionHistory) {
         this.username = username;
         this.password = password;
         this.balance = balance;
         this.cardNo = cardNo;
+        this.transactionHistory = transactionHistory;
     }
 
     public void setData(User user) {
@@ -37,6 +40,7 @@ public class User {
         this.password = user.getPassword();
         this.balance = user.getBalance();
         this.cardNo = user.getCardNo();
+        this.transactionHistory = user.getTransactionHistory();
     }
 
     public int getId() {
@@ -79,14 +83,23 @@ public class User {
         this.cardNo = cardNo;
     }
 
+    public String getTransactionHistory() {
+        return transactionHistory;
+    }
+
+    public void setTransactionHistory(String transactionHistory) {
+        this.transactionHistory = transactionHistory;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", balance='" + balance + '\'' +
+                ", balance=" + balance +
                 ", cardNo='" + cardNo + '\'' +
+                ", transactionHistory='" + transactionHistory + '\'' +
                 '}';
     }
 }

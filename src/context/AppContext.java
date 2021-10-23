@@ -8,11 +8,11 @@ public class AppContext {
 
     private volatile Application application;
     private volatile Stage primaryStage;
-    private volatile Page page;
+    private volatile Page pages;
     private volatile User currentUser;
 
     public AppContext() {
-        this.page = new Page();
+        this.pages = new Page();
         this.currentUser = new User();
     }
 
@@ -28,16 +28,16 @@ public class AppContext {
         return primaryStage;
     }
 
+    public Page getPages() {
+        return pages;
+    }
+
+    public void setPages(Page pages) {
+        this.pages = pages;
+    }
+
     public synchronized void setPrimaryStage(Stage primaryStage) {
         this.primaryStage = primaryStage;
-    }
-
-    public synchronized Page getPages() {
-        return page;
-    }
-
-    public synchronized void setPages(Page page) {
-        this.page = page;
     }
 
     public synchronized User getCurrentUser() {

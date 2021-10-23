@@ -797,7 +797,7 @@ false Zulu
     <database id="4" parent="1" name="krivat">
       <ObjectId>98780</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>3740</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3768</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|98781|98783|1
 </Relations>
@@ -883,7 +883,7 @@ UC/10
 </Acl>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>3741</IntrospectionStateNumber>
+      <IntrospectionStateNumber>3769</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="22" parent="4" name="plpgsql">
@@ -992,7 +992,7 @@ UC/10
     <table id="35" parent="21" name="users">
       <ObjectId>98783</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>3731</StateNumber>
+      <StateNumber>3767</StateNumber>
     </table>
     <column id="36" parent="35" name="id">
       <Position>1</Position>
@@ -1030,7 +1030,13 @@ UC/10
       <StateNumber>3731</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="41" parent="35" name="users_pk">
+    <column id="41" parent="35" name="transaction_history">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>3767</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="42" parent="35" name="users_pk">
       <ObjectId>98787</ObjectId>
       <StateNumber>3731</StateNumber>
       <ColNames>id</ColNames>
@@ -1040,7 +1046,7 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <index id="42" parent="35" name="users_username_uindex">
+    <index id="43" parent="35" name="users_username_uindex">
       <ObjectId>98789</ObjectId>
       <StateNumber>3732</StateNumber>
       <ColNames>username</ColNames>
@@ -1050,7 +1056,7 @@ UC/10
       <CollationNames>default</CollationNames>
       <ClassIds>3126</ClassIds>
     </index>
-    <key id="43" parent="35" name="users_pk">
+    <key id="44" parent="35" name="users_pk">
       <ObjectId>98788</ObjectId>
       <StateNumber>3731</StateNumber>
       <ColNames>id</ColNames>

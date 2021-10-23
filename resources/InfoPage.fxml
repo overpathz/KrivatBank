@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <children>
+        <AnchorPane prefHeight="401.0" prefWidth="384.0">
+            <children>
+                <Pane prefHeight="83.0" prefWidth="399.0" style="-fx-background-color: black;">
+                    <children>
+                        <Text fill="WHITE" layoutX="282.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KrivatBank" underline="true">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Text>
+                        <Text fill="#00ffb1" layoutX="17.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Information" textAlignment="CENTER" wrappingWidth="145.6351318359375">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+                <Text layoutX="24.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developer" wrappingWidth="145.6351318359375">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="55.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="overpathz" wrappingWidth="145.6351318359375">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Text>
+                <Text layoutX="24.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tech stack" wrappingWidth="145.6351318359375">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="55.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JDK 17, JavaFx, PostgreSQL, JDBC" wrappingWidth="318.6351318359375">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Text>
+                <Text layoutX="24.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telegram" wrappingWidth="145.6351318359375">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="55.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@uzing_s" wrappingWidth="145.6351318359375">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Text>
+                <Text layoutX="24.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Desc" wrappingWidth="145.6351318359375">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <Text layoutX="52.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Something like a banking system. You can transfer money by username or card number." textAlignment="JUSTIFY" wrappingWidth="336.6351318359375">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

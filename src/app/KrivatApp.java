@@ -19,14 +19,19 @@ public class KrivatApp extends Application {
 
         initializeAppContext(primaryStage);
 
-        Parent root = SceneFxmlLoader.loadFxml("Register");
+        Parent root = SceneFxmlLoader.loadFxml("Login");
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        primaryStage.setResizable(false);
+        primaryStage.setOnCloseRequest(event -> System.exit(0));
+        primaryStage.setAlwaysOnTop(true);
     }
 
     void initializeAppContext(Stage primaryStage) {
+
         AppContext appContext = new AppContext();
         appContext.setApplication(this);
         appContext.setPrimaryStage(primaryStage);
