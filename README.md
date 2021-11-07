@@ -7,7 +7,10 @@ Tech stack:
  - PostgreSQL
  - JDBC
 
-#### // TODO: password hashing, saving transaction history in separated table without violating normal forms, better form validation
+#### // TODO
+ - password hashing
+ - saving transaction history in separated table without violating normal forms
+ - better form validation
 
 
 ### Overview:
